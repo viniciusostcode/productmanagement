@@ -1,0 +1,120 @@
+﻿<table id="tabelaDados" class="table table-dark table-striped rounded-table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col"><i class="fa-solid fa-tag"></i> Produto</th>
+            <th scope="col"><i class="fa-solid fa-calendar"></i> Data</th>
+            <th scope="col"><i class="fa-solid fa-chart-simple"></i></i>  Situação</th>
+            <th scope="col"><i class="fa-solid fa-plus"></i> Quantidade</th>
+            <th scope="col"><i class="fa-solid fa-plus"></i> Preço</th>
+            <th scope="col"><i class="fa-solid fa-user"></i> Usuario</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr class="fadeIn">
+            <th scope="row"></th>
+        </tr>
+        <tr class="fadeIn">
+            <th scope="row"></th>
+        </tr>
+        <tr class="fadeIn">
+            <th scope="row"></th>
+        </tr>
+    </tbody>
+</table>
+<div class="action-buttons">
+    <button type="button" class="btn btn-primary" id="openModalBtn"><i class="fa-solid fa-plus"></i></i> Adicionar Produto</button>
+    <button type="button" class="btn btn-dark" id="editBtn"><i class="fa-regular fa-pen-to-square"></i> Editar Produto</button>
+    <button type="button" class="btn btn-secondary" id="removeBtn"><i class="fa-solid fa-xmark"></i> Remover Produto</button>
+</div>
+
+<div class="modal" tabindex="-1" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Adicionar novo produto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" id="closeModalAddBtn" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="myForm">
+                    <div class="form-group mb-3">
+                        <b><label for="formGroupExampleInput">Produto</label></b>
+                        <input type="text" class="form-control" id="produtoInput" name="produto" placeholder="insira o nome do produto..." required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <b><label for="formGroupExampleInput">Situação</label></b>
+                        <div>
+                            <select class="select form-control" id="situationInput" name="situacao">
+                                <option value="Vendido">Vendido</option>
+                                <option value="Comprado">Comprado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <b><label for="formGroupExampleInput">Quantidade</label></b>
+                        <input type="text" class="form-control" id="quantidadeInput" name="quantidade" placeholder="insira a quantidade..." required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <b><label for="formGroupExampleInput">Preço</label></b>
+                        <input type="text" class="form-control" id="precoInput" name="preco" placeholder="insira o preço comprado ou vendido..." required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelModalAddBtn">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="addBtn">Confimar</button>
+
+                <div class="response-message" id="responseMessage"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="edit-modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar produto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" id="closeModalEditBtn" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="cancelModalEditBtn" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="saveChangesEditBtn">Salvar</button>
+
+                <div class="response-message" id="responseMessage"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="remove-modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Deletar Produto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" id="closeModalRemoveBtn" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="editProduto" class="form-label">Deseja realmente remover este item?</label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="cancelModalRemoveBtn" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="saveChangesRemoveBtn">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+      </div>
+    </div>
+
+<div id="user" data-username="@ViewData["UserName"]" style="display: none;">
+    Olá, @ViewData["UserName"]!
+</div>
+
+
+
+

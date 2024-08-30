@@ -1,0 +1,287 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\repositories\\interfaces\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:repositories\\interfaces\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\models\\produtomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:models\\produtomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\data\\produtosystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:data\\produtosystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\data\\map\\produtomap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:data\\map\\produtomap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\data\\map\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:data\\map\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\migrations\\20240623194827_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:migrations\\20240623194827_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\sistema.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:sistema.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|c:\\users\\vinicius\\downloads\\vendas-main\\vendas-main\\controle de produtos\\backend\\src\\sistema\\models\\enums\\situacaoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16AF76E-2941-4C30-AD67-14C3C19CD03E}|Sistema.csproj|solutionrelative:models\\enums\\situacaoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\UsuarioRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\Interfaces\\IUsuarioRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T21:37:24.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\Interfaces\\IProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\Interfaces\\IProdutoRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IProdutoRepository.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAlwAcAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T22:04:19.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\ProdutoRepository.cs",
+              "RelativeToolTip": "Repositories\\ProdutoRepository.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAswDsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T20:55:12.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAQwCcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T17:23:15.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-21T22:49:07.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAADwvw4AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T22:39:32.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProdutoModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Models\\ProdutoModel.cs",
+              "RelativeDocumentMoniker": "Models\\ProdutoModel.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Models\\ProdutoModel.cs",
+              "RelativeToolTip": "Models\\ProdutoModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T21:35:56.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T18:59:15.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Data\\Map\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\Map\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Data\\Map\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\Map\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T18:35:43.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProdutoSystemDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Data\\ProdutoSystemDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ProdutoSystemDbContext.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Data\\ProdutoSystemDbContext.cs",
+              "RelativeToolTip": "Data\\ProdutoSystemDbContext.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAIwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T02:07:01.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProdutoMap.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Data\\Map\\ProdutoMap.cs",
+              "RelativeDocumentMoniker": "Data\\Map\\ProdutoMap.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Data\\Map\\ProdutoMap.cs",
+              "RelativeToolTip": "Data\\Map\\ProdutoMap.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T22:04:58.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20240623194827_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Migrations\\20240623194827_InitialMigration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240623194827_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Migrations\\20240623194827_InitialMigration.cs",
+              "RelativeToolTip": "Migrations\\20240623194827_InitialMigration.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T19:48:32.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Data\\ApplicationDbContext.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T18:29:59.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\UsuarioRepository.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T21:41:08.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Sistema.csproj",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj",
+              "RelativeDocumentMoniker": "Sistema.csproj",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj",
+              "RelativeToolTip": "Sistema.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-22T22:34:26.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\Interfaces\\IUsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\User\\Desktop\\Projeto\\vendas\\Controle de produtos\\backend\\src\\Sistema\\Repositories\\Interfaces\\IUsuarioRepository.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T22:40:50.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SituacaoEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Models\\Enums\\SituacaoEnum.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\SituacaoEnum.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Models\\Enums\\SituacaoEnum.cs",
+              "RelativeToolTip": "Models\\Enums\\SituacaoEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T22:48:21.337Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

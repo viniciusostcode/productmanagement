@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../css/imgs/background-blue.jpg')
+}
+
+/* Appearance's table */
+
+.container {
+    top: 10vh;
+    position: relative;
+    height: 50vh;
+    width: 120vh;
+}
+
+
+/* Button's padding size */
+
+.action-buttons > button {
+    font-size: 13px;
+    padding: 10px;
+}
+
+
+/* Select's appearance and color, inside the form */
+
+.select {
+    color: rgba(85, 85, 85, 0.836);
+    padding: 5px;
+    border-color: rgba(137, 139, 141, 0.301);
+    border-radius: 5px;
+}
+
+/* Each line animation inside the table */
+
+.fadeIn {
+    animation: fadeInAnimation ease-in 1.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
