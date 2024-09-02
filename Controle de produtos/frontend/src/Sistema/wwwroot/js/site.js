@@ -23,20 +23,29 @@ function closeEditModal() {
     modal.style.display = "none";
 }
 
-fetch(`https://localhost:7215/produtos/buscar/${username}`)
+fetch(`https://localhost:7215/products/find/${username}`)
     .then((response) => {
         if (!response.ok) {
-            throw new Error("Ocorreu um erro");
+            throw new Error("An error ocurred");
         }
-        console.log(response);
         return response.json();
 
     })
     .then((data) => {
-        console.log("Dados JSON recebidos:", data);
-        const tabela = document.getElementById("tabelaDados");
+        console.log("Json data:", data);
+
+
+        const tabela = document.getElementById("dataTable");
 
         const tbody = tabela.getElementsByTagName("tbody")[0];
+
+        const noProductsMessage = document.getElementById("noProductsMessage");
+
+        if (data.length === 0) {
+            tabela.style.display = "none";
+            noProductsMessage.style.display = "block";
+            return;
+        }
 
         tbody.innerHTML = "";
 
@@ -52,9 +61,9 @@ fetch(`https://localhost:7215/produtos/buscar/${username}`)
             const cell6 = newRow.insertCell(5);
             const cell7 = newRow.insertCell(6);
 
-            const data = new Date(item.data);
+            const date = new Date(item.date);
 
-            const opcoesDeFormato = {
+            const formatOptions = {
                 day: "2-digit",
                 month: "2-digit",
                 year: "numeric",
@@ -62,15 +71,15 @@ fetch(`https://localhost:7215/produtos/buscar/${username}`)
                 minute: "2-digit",
             };
 
-            const formatoData = new Intl.DateTimeFormat("pt-BR", opcoesDeFormato);
-            const dataFormatada = formatoData.format(data);
+            const formatDate = new Intl.DateTimeFormat("pt-BR", formatOptions);
+            const FormatedDate = formatDate.format(date);
 
             cell1.textContent = "#" + item.id;
-            cell2.textContent = item.produto;
-            cell3.textContent = dataFormatada;
-            cell4.textContent = item.situacao;
-            cell5.textContent = item.quantidade;
-            cell6.textContent = item.preco;
+            cell2.textContent = item.product;
+            cell3.textContent = FormatedDate;
+            cell4.textContent = item.situation;
+            cell5.textContent = item.quantity;
+            cell6.textContent = item.price;
             cell7.textContent = username;
 
             const checkbox = document.createElement("input");
@@ -86,8 +95,9 @@ fetch(`https://localhost:7215/produtos/buscar/${username}`)
         });
     })
     .catch((error) => {
-        console.error("Erro:", error);
+        console.error("An error ocurred:", error);
     });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const checkedIds = [];
@@ -148,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
 
                 saveChangesRemoveBtn.addEventListener("click", function () {
-                    const apiUrl = `https://localhost:7215/produtos/${id}`;
+                    const apiUrl = `https://localhost:7215/products/${id}`;
 
                     fetch(apiUrl, {
                         method: "DELETE",
@@ -158,12 +168,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     })
                         .then((response) => response.json())
                         .then((data) => {
-                            alert("Deletado com sucesso!");
-                            window.location.href = `https://localhost:7097/Home/Produtos/${username}`
+                            window.location.href = `https://localhost:7097/Home/products/${username}`
                             closeEditModal();
                         })
                         .catch((error) => {
-                            console.error("Ocorreu um erro:", error);
+                            console.error("An error ocurred while deleting the product, check out the logs.", error);
                         });
                 });
             }
@@ -185,34 +194,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 const cells = row.cells;
 
                 const id = cells[0].textContent.replace("#", "");
-                const produto = cells[1].textContent;
-                const data = cells[2].textContent;
-                const situacao = cells[3].textContent;
-                const quantidade = cells[4].textContent;
-                const preco = cells[5].textContent;
+                const product = cells[1].textContent;
+                const date = cells[2].textContent;
+                const situation = cells[3].textContent;
+                const quantity = cells[4].textContent;
+                const price = cells[5].textContent;
 
                 const modalEditContent = `
 
             <form id="editForm">
     <div class="mb-3">
-      <b><label for="editProduto" class="form-label">Produto:</label></b>
-      <input type="text" class="form-control" id="editProduto" value="${produto}">
+      <b><label for="editProduct" class="form-label">Product:</label></b>
+      <input type="text" class="form-control" id="editProduct" value="${product}">
     </div>
     <div class="mb-3">
-      <b><label for="editData" class="form-label">Data:</label></b>
-      <input type="text" class="form-control" id="editData" value="${data}">
+      <b><label for="editDate" class="form-label">Date:</label></b>
+      <input type="text" class="form-control" id="editDate" value="${date}">
     </div>
     <div class="mb-3">
-      <b><label for="editSituacao" class="form-label">Situacao:</label></b>
-      <input type="text" class="form-control" id="editSituacao" value="${situacao}">
+      <b><label for="editSituation" class="form-label">Situation:</label></b>
+      <input type="text" class="form-control" id="editSituation" value="${situation}">
     </div>
     <div class="mb-3">
-      <b><label for="editQuantidade" class="form-label">Quantidade:</label></b>
-      <input type="text" class="form-control" id="editQuantidade" value="${quantidade}">
+      <b><label for="editQuantity" class="form-label">Quantity:</label></b>
+      <input type="text" class="form-control" id="editQuantity" value="${quantity}">
     </div>
     <div class="mb-3">
-      <b><label for="editPreco" class="form-label">Preço:</label></b>
-      <input type="text" class="form-control" id="editPreco" value="${preco}">
+      <b><label for="editPreco" class="form-label">Price:</label></b>
+      <input type="text" class="form-control" id="editPrice" value="${price}">
     </div>
   </form>
           `;
@@ -226,24 +235,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
 
                 saveChangesEditBtn.addEventListener("click", function () {
-                    const produtoEditado = document.getElementById("editProduto").value;
-                    const dataEditada = document.getElementById("editData").value;
-                    const situacaoEditada =
-                        document.getElementById("editSituacao").value;
-                    const quantidadeEditada = parseFloat(
-                        document.getElementById("editQuantidade").value
+                    const editedProduct = document.getElementById("editProduct").value;
+                    const editedDate = document.getElementById("editDate").value;
+                    const editedProductSituation =
+                        document.getElementById("editSituation").value;
+                    const editedQuantity = parseFloat(
+                        document.getElementById("editQuantity").value
                     );
-                    const precoEditado = document.getElementById("editPreco").value;
+                    const editedPrice = document.getElementById("editPrice").value;
 
                     const editedData = {
-                        preco: precoEditado,
-                        situacao: situacaoEditada,
-                        quantidade: quantidadeEditada,
-                        data: new Date(dataEditada),
-                        produto: produtoEditado,
+                        price: editedPrice,
+                        situation: editedProductSituation,
+                        quantity: editedQuantity,
+                        date: new Date(editedDate),
+                        product: editedProduct,
                     };
 
-                    const apiUrl = `https://localhost:7215/produtos/${id}`;
+                    const apiUrl = `https://localhost:7215/products/${id}`;
 
                     fetch(apiUrl, {
                         method: "PUT",
@@ -255,23 +264,19 @@ document.addEventListener("DOMContentLoaded", function () {
                         .then((response) => {
 
                             if (!response.ok) {
-                                console.log("Aqui")
-                                console.log(response)
-                                throw new Error(`erro HTTP! Status: ${response.status}`);
+                                throw new Error(`HTTP error! Status: ${response.status}`);
                             }
 
                             return response.json();
                         })
 
                         .then((data) => {
-                            console.log("Resposta");
-                            console.log(data);
                             alert("Salvo com sucesso!");
-                            window.location.href = window.location.href = `https://localhost:7097/Home/Produtos/${usernamesession}`
+                            window.location.href = window.location.href = `https://localhost:7097/Home/Products/${usernamesession}`
                         })
                         .catch((error) => {
                             console.error("Erro:", error);
-                            alert("Ecorreu um erro ao editar o produto, confira os logs");
+                            alert("An erro ocurred while updating a product, check out the logs");
                         });
 
                     modalEdit.style.display = "none";
@@ -283,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
-        const rows = document.querySelectorAll("#tabelaDados tbody tr");
+        const rows = document.querySelectorAll("#dataTable tbody tr");
         rows.forEach(function (row) {
             row.classList.add("fadeIn");
         });
@@ -329,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log(formDataObject);
 
-        const apiUrl = `https://localhost:7215/produtos/adicionar/${username}`;
+        const apiUrl = `https://localhost:7215/products/add/${username}`;
 
         fetch(apiUrl, {
             method: "POST",
@@ -342,20 +347,20 @@ document.addEventListener("DOMContentLoaded", function () {
             .then((response) => {
 
                 if (!response.ok) {
-                    throw new Error(`erro HTTP! Status: ${response.status}`);
+                    throw new Error(`HTTP error! Status: ${response.status}`);
                 }
 
                 return response.json();
             })
             .then((data) => {
 
-                alert("Novo produto salvo com sucesso!");
-                window.location.href = `https://localhost:7097/Home/Produtos/${username}`
+                alert("New product saved with sucess!");
+                window.location.href = `https://localhost:7097/Home/Products/${username}`
                 closeAddModal();
             })
             .catch((error) => {
                 console.error("Erro:", error);
-                alert("Ocorreu um erro ao salvar produto, confira os logs");
+                alert("An error ocurred while saving the product, check out the logs");
             });
     });
 });

@@ -10,7 +10,7 @@ using Sistema.Data;
 
 namespace Sistema.Migrations
 {
-    [DbContext(typeof(ProdutoSystemDbContext))]
+    [DbContext(typeof(ProductSystemDbContext))]
     [Migration("20240623194827_InitialMigration")]
     partial class InitialMigration
     {

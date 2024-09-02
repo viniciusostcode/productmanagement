@@ -7,15 +7,15 @@ using System.Reflection.Emit;
 
 namespace Sistema.Data.Map
 {
-    public class ProdutoMap : IEntityTypeConfiguration<ProdutoModel>
+    public class ProductMap : IEntityTypeConfiguration<ProductModel>
     {
-        public void Configure(EntityTypeBuilder<ProdutoModel> builder)
+        public void Configure(EntityTypeBuilder<ProductModel> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Preco);
-            builder.Property(x => x.Situacao);
-            builder.Property(x => x.Data);
-            builder.Property(x => x.Produto);
+            builder.Property(x => x.Price);
+            builder.Property(x => x.Situation);
+            builder.Property(x => x.Date);
+            builder.Property(x => x.Product);
         }
     }
 }

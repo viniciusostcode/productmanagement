@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj": {}
+    "C:\\Users\\User\\Desktop\\productmanagement\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj": {
+    "C:\\Users\\User\\Desktop\\productmanagement\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj": {
       "version": "2.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\productmanagement\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj",
         "projectName": "Sistema",
-        "projectPath": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj",
-        "packagesPath": "C:\\Users\\Vinicius\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vinicius\\Downloads\\vendas-main\\vendas-main\\Controle de produtos\\backend\\src\\Sistema\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\productmanagement\\Controle de produtos\\backend\\src\\Sistema\\Sistema.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\productmanagement\\Controle de produtos\\backend\\src\\Sistema\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Vinicius\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

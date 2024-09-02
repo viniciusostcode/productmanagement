@@ -16,7 +16,7 @@ namespace Sistema
             // Add services to the container.
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-           .AddEntityFrameworkStores<ProdutoSystemDbContext>()
+           .AddEntityFrameworkStores<ProductSystemDbContext>()
            .AddDefaultTokenProviders();
 
             builder.Services.AddControllers();
@@ -24,9 +24,9 @@ namespace Sistema
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddDbContext<ProdutoSystemDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SQLiteConnection")));
+            builder.Services.AddDbContext<ProductSystemDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SQLiteConnection")));
 
-            builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
             builder.Services.AddScoped<UserManager<ApplicationUser>>();
 

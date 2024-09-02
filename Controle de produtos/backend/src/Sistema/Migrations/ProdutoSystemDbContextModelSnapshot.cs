@@ -9,7 +9,7 @@ using Sistema.Data;
 
 namespace Sistema.Migrations
 {
-    [DbContext(typeof(ProdutoSystemDbContext))]
+    [DbContext(typeof(ProductSystemDbContext))]
     partial class ProdutoSystemDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -170,10 +170,6 @@ namespace Sistema.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
@@ -213,37 +209,37 @@ namespace Sistema.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("Sistema.Models.ProdutoModel", b =>
+            modelBuilder.Entity("Sistema.Models.ProductModel", b =>
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime?>("Data")
+                    b.Property<DateTime?>("Date")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("IdUsuario")
+                    b.Property<string>("IdUser")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Preco")
+                    b.Property<string>("Price")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Produto")
+                    b.Property<string>("Product")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Quantidade")
+                    b.Property<int>("Quantity")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Situacao")
+                    b.Property<string>("Situation")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdUsuario");
+                    b.HasIndex("IdUser");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -297,13 +293,13 @@ namespace Sistema.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Sistema.Models.ProdutoModel", b =>
+            modelBuilder.Entity("Sistema.Models.ProductModel", b =>
                 {
-                    b.HasOne("Sistema.Models.ApplicationUser", "Usuario")
+                    b.HasOne("Sistema.Models.ApplicationUser", "User")
                         .WithMany()
-                        .HasForeignKey("IdUsuario");
+                        .HasForeignKey("IdUser");
 
-                    b.Navigation("Usuario");
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }
