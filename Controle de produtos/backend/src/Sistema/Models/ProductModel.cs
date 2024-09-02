@@ -12,6 +12,5 @@ namespace Sistema.Models
         public string? Product { get; set; }
         public string? IdUser { get; set; }  
         public virtual ApplicationUser? User { get; set; } 
-
     }
 }
