@@ -18,13 +18,7 @@ namespace WebApplication1.Controllers
             _userManager = userManager;
         }
 
-        public IActionResult Products()
-        {
-            var userName = HttpContext.Session.GetString("UserName");
-            ViewData["UserName"] = userName;
-
-            return View();
-        }
+      
         public IActionResult Index()
         {
             return View();

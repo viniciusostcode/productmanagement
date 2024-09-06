@@ -1,13 +1,9 @@
 ﻿var usernamesession = document.getElementById("user").dataset.username;
-console.log("Usuario da sessão");
 console.log(usernamesession);
 
 localStorage.setItem('username', usernamesession);
 
-console.log(localStorage);
-
 var username = localStorage.getItem('username');
-console.log("Usuario resgatado do storage");
 console.log(username);
 
 
@@ -168,7 +164,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     })
                         .then((response) => response.json())
                         .then((data) => {
-                            window.location.href = `https://localhost:7097/Home/products/${username}`
+                            alert("product deleted with sucess!");
+                            window.location.href = `https://localhost:7097/products`
                             closeEditModal();
                         })
                         .catch((error) => {
@@ -271,8 +268,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         })
 
                         .then((data) => {
-                            alert("Salvo com sucesso!");
-                            window.location.href = window.location.href = `https://localhost:7097/Home/Products/${usernamesession}`
+                            alert("product updated with sucess!");
+                            window.location.href = window.location.href = `https://localhost:7097/Products`
                         })
                         .catch((error) => {
                             console.error("Erro:", error);
@@ -355,7 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then((data) => {
 
                 alert("New product saved with sucess!");
-                window.location.href = `https://localhost:7097/Home/Products/${username}`
+                window.location.href = `https://localhost:7097/Products`
                 closeAddModal();
             })
             .catch((error) => {

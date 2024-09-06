@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
@@ -16,9 +17,9 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(300000); // Tempo de expira��o da sess�o
+    options.IdleTimeout = TimeSpan.FromMinutes(300000); 
     options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true; // make the session cookie essential
+    options.Cookie.IsEssential = true; 
 });
 
 
@@ -36,18 +37,7 @@ else
     app.UseHsts();
 }
 
-//app.Use(async (context, next) =>
-//{
-//    if (!context.User.Identity.IsAuthenticated &&
-//        !context.Request.Path.StartsWithSegments("/Identity/Account/Login") 
-//        && !context.Request.Path.StartsWithSegments("/Identity/Account/Register"))
-//    {
-//        context.Response.Redirect("/Identity/Account/Login");
-//        return;
-//    }
 
-//    await next();
-//});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

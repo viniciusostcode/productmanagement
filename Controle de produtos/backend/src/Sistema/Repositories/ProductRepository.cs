@@ -17,7 +17,6 @@ namespace Sistema.Repositories
             _dbContextProduct = dbContextTransaction;
             _userManager = userManager;
         }
-
         public async Task<List<ProductModel>> AddProductList(List<ProductModel> list, string idUser)
         {
             List<ProductModel> ProductList = new List<ProductModel>();

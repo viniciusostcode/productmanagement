@@ -121,7 +121,7 @@ namespace WebApplication1.Areas.Identity.Pages.Account
                     HttpContext.Session.SetString("UserName", Input.Username);
 
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect($"/Home/Products");
+                    return LocalRedirect($"/Products");
                 }
                 if (result.RequiresTwoFactor)
                 {
