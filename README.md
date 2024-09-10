@@ -1,10 +1,10 @@
 
-# Sistema de Produtos
+# Product Management
 
 Sistema de controle de produtos, ao qual o usuário de interesse criará um cadastro e adicionando produtos no estoque.
 
 
-## Como rodar o projeto
+## How to run
 
 Aviso: é nescessário ter o .NET SDK 6.0 e 8.0 instalado.
 
