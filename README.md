@@ -25,7 +25,6 @@ Abra no seu browser o local host na porta https://localhost:7097/
 
 
 
-
 ## Stack usada
 
 - ASP.NET Core
