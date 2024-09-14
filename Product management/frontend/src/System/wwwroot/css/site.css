@@ -8,12 +8,20 @@ body {
     background-image: url('../css/imgs/background-blue.jpg')
 }
 
-/* Appearance's table */
+#liveAlertPlaceholder {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050; /* Certifique-se de que o alerta está acima de outros elementos */
+}
+
 
 #noProductsMessage {
     display: none;
     color: white;
 }
+
+/* Appearance's table */
 
 .container {
     top: 10vh;

@@ -8,93 +8,123 @@ console.log(username);
 
 const checkboxList = [];
 
+const tabela = document.getElementById("dataTable");
+const tbody = tabela.getElementsByTagName("tbody")[0];
+
+tabela.style.display = "none";
+
+function showAlert(message, type = 'info') {
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+    const alert = document.createElement('div');
+    alert.className = `alert alert-${type} alert-dismissible fade show`;
+    alert.role = 'alert';
+    alert.innerHTML = `
+      ${message}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+    alertPlaceholder.appendChild(alert);
+
+    setTimeout(() => {
+        alert.classList.remove('show');
+        alert.classList.add('fade');
+        setTimeout(() => alert.remove(), 150);
+    }, 5000);
+}
+
+
 function closeAddModal() {
     const modal = document.getElementById("myModal");
     modal.style.display = "none";
 }
-
+function closeRemoveModal() {
+    const modal = document.getElementById("remove-modal");
+    modal.style.display = "none";
+}
 function closeEditModal() {
     const modal = document.getElementById("edit-modal");
     modal.style.display = "none";
 }
 
-fetch(`https://localhost:7215/products/find/${username}`)
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error("An error ocurred");
-        }
-        return response.json();
+document.addEventListener("DOMContentLoaded", function () {
+    loadProducts(username);
+    closeAddModal()
+});
 
-    })
-    .then((data) => {
-        console.log("Json data:", data);
+function loadProducts(username) {
+    fetch(`https://localhost:7215/products/find/${username}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("An error ocurred");
+                showAlert("An error ocurred", "warning");
+            }
+            return response.json();
 
+        })
+        .then((data) => {
 
-        const tabela = document.getElementById("dataTable");
+            console.log("Json data:", data);
 
-        const tbody = tabela.getElementsByTagName("tbody")[0];
+            tbody.innerHTML = "";
 
-        const noProductsMessage = document.getElementById("noProductsMessage");
+            if (data.length === 0) {
+                noProductsMessage.style.display = "block";
+                return;
+            }
 
-        if (data.length === 0) {
-            tabela.style.display = "none";
-            noProductsMessage.style.display = "block";
-            return;
-        }
+            tabela.style.display = "block";
 
-        tbody.innerHTML = "";
+            data.forEach((item) => {
 
-        data.forEach((item) => {
+                const newRow = tbody.insertRow();
 
-            const newRow = tbody.insertRow();
+                const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+                const cell3 = newRow.insertCell(2);
+                const cell4 = newRow.insertCell(3);
+                const cell5 = newRow.insertCell(4);
+                const cell6 = newRow.insertCell(5);
+                const cell7 = newRow.insertCell(6);
+                const cell8 = newRow.insertCell(7);
 
-            const cell1 = newRow.insertCell(0);
-            const cell2 = newRow.insertCell(1);
-            const cell3 = newRow.insertCell(2);
-            const cell4 = newRow.insertCell(3);
-            const cell5 = newRow.insertCell(4);
-            const cell6 = newRow.insertCell(5);
-            const cell7 = newRow.insertCell(6);
-            const cell8 = newRow.insertCell(7);
+                const date = new Date(item.date);
 
-            const date = new Date(item.date);
+                const formatOptions = {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                };
 
-            const formatOptions = {
-                day: "2-digit",
-                month: "2-digit",
-                year: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-            };
+                const formatDate = new Intl.DateTimeFormat("pt-BR", formatOptions);
+                const FormatedDate = formatDate.format(date);
 
-            const formatDate = new Intl.DateTimeFormat("pt-BR", formatOptions);
-            const FormatedDate = formatDate.format(date);
+                cell1.textContent = "#" + item.id;
+                cell2.textContent = item.product;
+                cell3.textContent = item.situation;
+                cell4.textContent = item.quantity;
+                cell5.textContent = item.currencyCode;
+                cell6.textContent = "$" + item.price;
+                cell7.textContent = username;
+                cell8.textContent = FormatedDate;
 
-            cell1.textContent = "#" + item.id;
-            cell2.textContent = item.product;
-            cell3.textContent = FormatedDate;
-            cell4.textContent = item.situation;
-            cell5.textContent = item.quantity;
-            cell6.textContent = item.currencyCode;
-            cell7.textContent = "$" + item.price;
-            cell8.textContent = username;
+                const checkbox = document.createElement("input");
 
-            const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.className = "checkbox";
+                checkbox.dataset.id = item.id;
+                checkbox.style.display = "none";
 
-            checkbox.type = "checkbox";
-            checkbox.className = "checkbox";
-            checkbox.dataset.id = item.id;
-            checkbox.style.display = "none";
+                cell1.insertBefore(checkbox, cell1.firstChild);
 
-            cell1.insertBefore(checkbox, cell1.firstChild);
-
-            checkboxList.push(checkbox);
+                checkboxList.push(checkbox);
+            });
+        })
+        .catch((error) => {
+            console.error("An error ocurred:", error);
+            showAlert("Failed to load products. Please try again later.", "warning");
         });
-    })
-    .catch((error) => {
-        console.error("An error ocurred:", error);
-    });
-
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const checkedIds = [];
@@ -165,9 +195,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     })
                         .then((response) => response.json())
                         .then((data) => {
-                            alert("Product deleted with sucess!");
-                            window.location.href = `https://localhost:7097/products`
-                            closeEditModal();
+                            closeRemoveModal();
+                            showAlert("Product deleted with sucess!", "success");
+                            loadProducts(username);
                         })
                         .catch((error) => {
                             console.error("An error ocurred while deleting the product, check out the logs.", error);
@@ -193,11 +223,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const id = cells[0].textContent.replace("#", "");
                 const product = cells[1].textContent;
-                const date = cells[2].textContent;
-                const situation = cells[3].textContent;
-                const quantity = cells[4].textContent;
-                const currencyCode = cells[5].textContent;
-                const price = cells[6].textContent.replace("$", "");
+                const quantity = cells[3].textContent;
+                const price = cells[5].textContent.replace("$", "");
+                const date = cells[7].textContent;
 
                 const modalEditContent = `
 
@@ -284,12 +312,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         })
 
                         .then((data) => {
-                            alert("Product updated with success!");
-                            window.location.href = window.location.href = `https://localhost:7097/Products`
+                            loadProducts(username);
+                            showAlert("Product updated with sucess!", "success");
                         })
                         .catch((error) => {
                             console.error("Erro:", error);
-                            alert("An erro ocurred while updating a product, check out the logs");
+                            showAlert("An erro ocurred while updating a product, check out the logs", "warning");
                         });
 
                     modalEdit.style.display = "none";
@@ -366,14 +394,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json();
             })
             .then((data) => {
-
-                alert("New product saved with sucess!");
-                window.location.href = `https://localhost:7097/Products`
+                loadProducts(username);
                 closeAddModal();
+                showAlert("New product saved with sucess!", "success");
             })
             .catch((error) => {
                 console.error("Erro:", error);
-                alert("An error ocurred while saving the product, check out the logs");
+                showAlert("An error ocurred while saving the product, check out the logs", "warning");
             });
+
     });
 });
