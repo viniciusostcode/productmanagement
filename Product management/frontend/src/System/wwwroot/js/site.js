@@ -1,10 +1,4 @@
-﻿var usernamesession = document.getElementById("user").dataset.username;
-console.log(usernamesession);
-
-localStorage.setItem('username', usernamesession);
-
-var username = localStorage.getItem('username');
-console.log(username);
+﻿var username = document.getElementById("user").dataset.username;
 
 const checkboxList = [];
 
@@ -223,7 +217,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const id = cells[0].textContent.replace("#", "");
                 const product = cells[1].textContent;
+                const situation = cells[2].textContent;
                 const quantity = cells[3].textContent;
+                const currencyCode = cells[4].textContent;
                 const price = cells[5].textContent.replace("$", "");
                 const date = cells[7].textContent;
 
@@ -240,10 +236,10 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     <div class="mb-3">
       <b><label for="editSituation" class="form-label">Situation:</label></b>
-      <select class="select form-control" id="editSituation" name="situation">
-                                <option value="Sold">Sold</option>
-                                <option value="Purchased">Purchased</option>
-                            </select>
+       <select class="select form-control" id="editSituation" name="situation">
+                            <option value="Sold" ${situation === "Sold" ? "selected" : ""}>Sold</option>
+                            <option value="Purchased" ${situation === "Purchased" ? "selected" : ""}>Purchased</option>
+                        </select>
     </div>
     <div class="mb-3">
       <b><label for="editQuantity" class="form-label">Quantity:</label></b>
@@ -251,10 +247,10 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     <div class="mb-3">
   <b><label for="editCorrencyCode" class="form-label">Currency Code:</label></b>
- <select class="select form-control" id="editCurrencyCode" name="currencyCode">
-                                <option value="BRL">Brazillian Real</option>
-                                <option value="USD">Dollar</option>
-                            </select>
+  <select class="select form-control" id="editCurrencyCode" name="currencyCode">
+                            <option value="BRL" ${currencyCode === "BRL" ? "selected" : ""}>Brazillian Real</option>
+                            <option value="USD" ${currencyCode === "USD" ? "selected" : ""}>Dollar</option>
+                        </select>
 </div>
     <div class="mb-3">
       <b><label for="editPreco" class="form-label">Price:</label></b>
@@ -293,7 +289,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     const apiUrl = `https://localhost:7215/products/${id}`;
 
-                    console.log("Corpo do JSON enviado para a API:", JSON.stringify(editedData, null, 2));
 
                     fetch(apiUrl, {
                         method: "PUT",
@@ -363,10 +358,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("myForm");
-    const adicionarBtn = document.getElementById("addBtn");
-    const responseMessage = document.getElementById("responseMessage");
+    const addBtn = document.getElementById("addBtn");
 
-    adicionarBtn.addEventListener("click", function () {
+    addBtn.addEventListener("click", function () {
         const formData = new FormData(form);
         const formDataObject = {};
         formData.forEach((value, key) => {

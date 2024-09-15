@@ -2015,3 +2015,4 @@ C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\o
 C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\obj\Debug\net8.0\frontend.pdb
 C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\obj\Debug\net8.0\frontend.genruntimeconfig.cache
 C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\obj\Debug\net8.0\ref\frontend.dll
+C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
