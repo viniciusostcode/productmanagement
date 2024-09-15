@@ -5,7 +5,7 @@ Sistema de controle de produtos, ao qual o usuário de interesse criará um cada
 
 ## How to run
 
-Aviso: é nescessário ter o .NET SDK 6.0 e 8.0 instalado.
+warning: é nescessário ter o .NET SDK 6.0 e 8.0 instalado.
 
 Acesse as pastas raizes do back-end e front-end em
 
