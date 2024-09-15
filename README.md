@@ -28,4 +28,3 @@ Abra no seu browser o local host na porta https://localhost:7097/
 - ASP.NET Core
 - Entity Framework
 - SQLite3 (Previamente foi usado SQL + SQLServer porém foi decidido, que por se tratar de um projeto simples e visando a baixa configuração e instalação de uma instância de banco de dados, seria melhor o uso do sqlite).
-
