@@ -15,7 +15,7 @@ Controle de produtos\frontend\src\Sistema
 
 # 
 
-Abrindo um terminal nos respectivos diretórios, use o comando abaixo.
+open um terminal nos respectivos diretórios, use o comando abaixo.
 
 ```bash
   dotnet run
