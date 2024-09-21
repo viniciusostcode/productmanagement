@@ -39,17 +39,50 @@ function closeEditModal() {
     modal.style.display = "none";
 }
 
+function getToken() {
+    const name = 'AuthToken=';
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookies = decodedCookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) === 0) {
+            const token = cookie.substring(name.length, cookie.length);
+            return token;
+        }
+    }
+    console.log('Token Not Found');
+    return '';
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+    const token = getToken();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    token = getToken();
+    console.log("aqui esta o token resgatado", token)
     loadProducts(username);
     closeAddModal()
 });
 
 function loadProducts(username) {
-    fetch(`https://localhost:7215/products/find/${username}`)
+    fetch(`https://localhost:7097/products/GetProductsData`, {
+        method: 'GET'
+    })
+
         .then((response) => {
             if (!response.ok) {
-                throw new Error("An error ocurred");
-                showAlert("An error ocurred", "warning");
+                if (response.status === 401) {
+                    showAlert("Unauthorized: Please log in to view your products.", "warning");
+                    throw new Error("Unauthorized");
+                } else {
+                    showAlert("An error occurred", "warning");
+                    throw new Error("An error occurred");
+                }
+
             }
             return response.json();
 
@@ -115,8 +148,11 @@ function loadProducts(username) {
             });
         })
         .catch((error) => {
-            console.error("An error ocurred:", error);
-            showAlert("Failed to load products. Please try again later.", "warning");
+            if (error.message.includes("401")) {
+                showAlert("Unauthorized: Please log in to view your products.", "warning");
+            } else {
+                showAlert("Failed to load products. Please try again later.", "warning");
+            }
         });
 }
 
@@ -184,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     fetch(apiUrl, {
                         method: "DELETE",
                         headers: {
+                            'Authorization': `Bearer ${token}`,
                             "Content-Type": "application/json",
                         },
                     })
@@ -194,7 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             loadProducts(username);
                         })
                         .catch((error) => {
-                            console.error("An error ocurred while deleting the product, check out the logs.", error);
+                            if (error.message.includes("401")) {
+                                showAlert("Unauthorized: Please log in to delete products.", "warning");
+                            } else {
+                                showAlert("An error occurred while deleting the product. Please check the logs.", "warning");
+                            }
                         });
                 });
             }
@@ -293,6 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     fetch(apiUrl, {
                         method: "PUT",
                         headers: {
+                            'Authorization': `Bearer ${token}`,
                             "Content-Type": "application/json",
                         },
                         body: JSON.stringify(editedData),
@@ -374,6 +416,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(apiUrl, {
             method: "POST",
             headers: {
+                'Authorization': `Bearer ${token}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(formDataObject),
@@ -393,8 +436,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 showAlert("New product saved with sucess!", "success");
             })
             .catch((error) => {
-                console.error("Erro:", error);
-                showAlert("An error ocurred while saving the product, check out the logs", "warning");
+                if (error.message.includes("401")) {
+                    showAlert("Unauthorized: Please log in to view your products.", "warning");
+                } else {
+                    showAlert("An error ocurred while saving the product, check out the logs", "warning");
+                }
             });
 
     });

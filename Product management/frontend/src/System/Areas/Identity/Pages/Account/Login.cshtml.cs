@@ -3,6 +3,7 @@
 #nullable disable
 
 using System.ComponentModel.DataAnnotations;
+using frontend.TokenService;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -14,11 +15,13 @@ namespace WebApplication1.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly TokenService _tokenService;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, TokenService tokenService)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _tokenService = tokenService;
         }
 
         /// <summary>
@@ -112,6 +115,15 @@ namespace WebApplication1.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Username, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    var user = await _signInManager.UserManager.FindByNameAsync(Input.Username);
+                    var token = _tokenService.GenerateToken(user.Id);
+
+                    HttpContext.Response.Cookies.Append("AuthToken", token, new CookieOptions
+                    {
+                        HttpOnly = false,
+                        Secure = true
+                    });
+
                     HttpContext.Session.SetString("UserName", Input.Username);
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect($"/Products");

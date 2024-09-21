@@ -1,16 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using backend.Models;
 using backend.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
     [Route("products")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductRepository _productRepository;
         public ProductController(IProductRepository productRepository)
-        {
+       {
             _productRepository = productRepository;
         }
 
@@ -68,6 +70,7 @@ namespace backend.Controllers
         [HttpPost("add/{user}")]
         public async Task<ActionResult<ProductModel>> AddProduct([FromBody] ProductModel productModel, string user)
         {
+
             ProductModel product = await _productRepository.AddProduct(productModel, user);
 
             return Ok(product);

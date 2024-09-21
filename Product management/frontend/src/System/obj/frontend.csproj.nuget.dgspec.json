@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj": {}
+    "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj": {
+    "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj",
+        "projectUniqueName": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj",
         "projectName": "frontend",
-        "projectPath": "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\obj\\",
+        "projectPath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj",
+        "packagesPath": "C:\\Users\\Vinicius\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vinicius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,6 +82,10 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.0.2, )"
@@ -102,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

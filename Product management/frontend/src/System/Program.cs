@@ -1,5 +1,7 @@
+using frontend.TokenService;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using WebApplication1.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +23,9 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true; 
 });
 
+var jwtSettings = builder.Configuration.GetSection("Jwt");
+builder.Services.AddSingleton(new TokenService(jwtSettings["SecretKey"]));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,18 +41,17 @@ else
 }
 
 
-
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseSession();
 app.UseRouting();
-
 app.UseAuthorization();
+
+
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
-app.UseSession();
 app.Run();
