@@ -12,7 +12,7 @@ namespace backend.Controllers
     {
         private readonly IProductRepository _productRepository;
         public ProductController(IProductRepository productRepository)
-       {
+        {
             _productRepository = productRepository;
         }
 
@@ -49,7 +49,7 @@ namespace backend.Controllers
                 return StatusCode(500, $"Internal Server Error: {ex.Message}");
             }
         }
-        
+
         [HttpGet("find/{user}")]
         public async Task<ActionResult<List<ProductModel>>> FindProductByUser(string user)
         {
@@ -68,10 +68,10 @@ namespace backend.Controllers
         }
 
         [HttpPost("add/{user}")]
-        public async Task<ActionResult<ProductModel>> AddProduct([FromBody] ProductModel productModel, string user)
+        public async Task<ActionResult<ProductModel>> AddProduct(string user, [FromBody] ProductModel productModel)
         {
 
-            ProductModel product = await _productRepository.AddProduct(productModel, user);
+            ProductModel product = await _productRepository.AddProduct(user, productModel);
 
             return Ok(product);
         }
@@ -84,18 +84,19 @@ namespace backend.Controllers
             return Ok(product);
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult<ProductModel>> UpdateProduct(int id, [FromBody] ProductModel productModel)
+        [HttpPut("{user}/{id}")]
+        public async Task<ActionResult<ProductModel>> UpdateProduct(int id, string user, [FromBody] ProductModel productModel)
         {
-            ProductModel product = await _productRepository.UpdateProduct(productModel, id);
+            ProductModel product = await _productRepository.UpdateProduct(id, user, productModel);
 
             return Ok(product);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<ProductModel>> DeleteProduct(int id)
+        [HttpDelete("{user}/{id}")]
+        public async Task<ActionResult<ProductModel>> DeleteProduct(int id, string user)
         {
-            bool deleted = await _productRepository.DeleteProduct(id);
+
+            bool deleted = await _productRepository.DeleteProduct(id, user);
 
             return Ok(deleted);
         }

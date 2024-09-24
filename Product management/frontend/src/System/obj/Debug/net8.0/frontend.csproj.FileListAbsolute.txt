@@ -2309,3 +2309,7 @@ C:\Users\Vinicius\Documents\Projetos\productmanagement\Product management\fronte
 C:\Users\Vinicius\Documents\Projetos\productmanagement\Product management\frontend\src\System\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Vinicius\Documents\Projetos\productmanagement\Product management\frontend\src\System\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Vinicius\Documents\Projetos\productmanagement\Product management\frontend\src\System\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\User\Desktop\productmanagement\Product management\frontend\src\System\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -62,7 +62,7 @@ namespace backend.Repositories
 
             return result;
         }
-        public async Task<ProductModel> AddProduct(ProductModel productModel, string userName)
+        public async Task<ProductModel> AddProduct(string userName, ProductModel productModel)
         {
             try
             {
@@ -99,13 +99,15 @@ namespace backend.Repositories
             }
         }
 
-        public async Task<bool> DeleteProduct(int id)
+        public async Task<bool> DeleteProduct(int id, string user)
         {
-            ProductModel produto = await FindById(id);
+            ProductModel product = await FindById(id);
 
-            if (produto.Equals(null)) throw new Exception($"Product not found by id: {id}");
+            if (product.Equals(null)) throw new Exception($"Product not found by id: {id}");
 
-            _dbContextProduct.Products.Remove(produto);
+            if (product.User.UserName != user) throw new Exception($"You are not allowed to delete this product.");
+
+            _dbContextProduct.Products.Remove(product);
 
             await _dbContextProduct.SaveChangesAsync();
 
@@ -113,13 +115,16 @@ namespace backend.Repositories
         }
 
 
-        public async Task<ProductModel> UpdateProduct(ProductModel productModel, int id)
+        public async Task<ProductModel> UpdateProduct(int id, string user, ProductModel productModel)
         {
             try
             {
                 ProductModel product = await FindById(id);
 
                 if (product.Equals(null)) throw new Exception($"Product not found by id: {id}");
+
+                if (product.User.UserName != user) throw new Exception($"You are not allowed to delete this product.");
+
 
                 product.Price = productModel.Price;
                 product.Quantity = productModel.Quantity;

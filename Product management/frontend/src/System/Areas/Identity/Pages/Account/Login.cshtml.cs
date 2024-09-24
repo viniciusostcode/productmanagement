@@ -124,7 +124,6 @@ namespace WebApplication1.Areas.Identity.Pages.Account
                         Secure = true
                     });
 
-                    HttpContext.Session.SetString("UserName", Input.Username);
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect($"/Products");
                 }

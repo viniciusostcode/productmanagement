@@ -10,9 +10,6 @@ public class ProductsController : Controller
 {
     public IActionResult Index()
     {
-        var userName = User.Identity.IsAuthenticated ? User.Identity.Name : "Unknown";
-        ViewData["UserName"] = userName;
-
         return View();
     }
 
@@ -42,8 +39,10 @@ public class ProductsController : Controller
     }
 
     [HttpPut]
-    public async Task<IActionResult> UpdateProductsData(decimal id, string product)
+    public async Task<IActionResult> UpdateProductData(decimal id, [FromBody] ProductModel product)
     {
+        var userName = User.Identity.IsAuthenticated ? User.Identity.Name : "Unknown";
+
         var token = Request.Cookies["AuthToken"];
 
         using (var client = new HttpClient())
@@ -52,11 +51,38 @@ public class ProductsController : Controller
             var productUpdated = new StringContent(jsonString, Encoding.UTF8, "application/json");
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            var response = await client.PutAsync($"https://localhost:7215/products/{id}", productUpdated);
+            var response = await client.PutAsync($"https://localhost:7215/products/{userName}/{id}", productUpdated);
 
             if (response.IsSuccessStatusCode)
             {
-                var products = JsonSerializer.Deserialize<List<ProductModel>>(await response.Content.ReadAsStringAsync());
+                var products = JsonSerializer.Deserialize<ProductModel>(await response.Content.ReadAsStringAsync());
+                return Json(products);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode);
+            }
+        }
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AddProductData([FromBody] ProductModel product)
+    {
+        var userName = User.Identity.IsAuthenticated ? User.Identity.Name : "Unknown";
+
+        var token = Request.Cookies["AuthToken"];
+
+        using (var client = new HttpClient())
+        {
+            var jsonString = JsonSerializer.Serialize(product);
+            var AddedProduct = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            var response = await client.PostAsync($"https://localhost:7215/products/add/{userName}", AddedProduct);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var products = JsonSerializer.Deserialize<ProductModel>(await response.Content.ReadAsStringAsync());
                 return Json(products);
             }
             else
@@ -69,13 +95,15 @@ public class ProductsController : Controller
     [HttpDelete]
     public async Task<IActionResult> DeleteProduct(decimal id)
     {
+        var userName = User.Identity.IsAuthenticated ? User.Identity.Name : "Unknown";
+
         var token = Request.Cookies["AuthToken"];
 
         using (var client = new HttpClient())
         {
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            var response = await client.DeleteAsync($"https://localhost:7215/products/{id}");
+            var response = await client.DeleteAsync($"https://localhost:7215/products/{userName}/{id}");
 
             if (response.IsSuccessStatusCode)
             {

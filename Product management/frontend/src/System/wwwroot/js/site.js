@@ -1,6 +1,4 @@
-﻿var username = document.getElementById("user").dataset.username;
-
-const checkboxList = [];
+﻿const checkboxList = [];
 
 const tabela = document.getElementById("dataTable");
 const tbody = tabela.getElementsByTagName("tbody")[0];
@@ -39,36 +37,13 @@ function closeEditModal() {
     modal.style.display = "none";
 }
 
-function getToken() {
-    const name = 'AuthToken=';
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookies = decodedCookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i];
-        while (cookie.charAt(0) === ' ') {
-            cookie = cookie.substring(1);
-        }
-        if (cookie.indexOf(name) === 0) {
-            const token = cookie.substring(name.length, cookie.length);
-            return token;
-        }
-    }
-    console.log('Token Not Found');
-    return '';
-}
 
 document.addEventListener("DOMContentLoaded", function () {
-    const token = getToken();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    token = getToken();
-    console.log("aqui esta o token resgatado", token)
-    loadProducts(username);
+    loadProducts();
     closeAddModal()
 });
 
-function loadProducts(username) {
+function loadProducts() {
     fetch(`https://localhost:7097/products/GetProductsData`, {
         method: 'GET'
     })
@@ -95,12 +70,17 @@ function loadProducts(username) {
 
             if (data.length === 0) {
                 noProductsMessage.style.display = "block";
+                tabela.style.display = "none";
                 return;
             }
 
             tabela.style.display = "block";
+            noProductsMessage.style.display = "none";
 
             data.forEach((item) => {
+
+                console.log("aqui ta o item");
+                console.log(item);
 
                 const newRow = tbody.insertRow();
 
@@ -132,7 +112,7 @@ function loadProducts(username) {
                 cell4.textContent = item.quantity;
                 cell5.textContent = item.currencyCode;
                 cell6.textContent = "$" + item.price;
-                cell7.textContent = username;
+                cell7.textContent = item.user.userName;
                 cell8.textContent = FormatedDate;
 
                 const checkbox = document.createElement("input");
@@ -215,20 +195,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
 
                 saveChangesRemoveBtn.addEventListener("click", function () {
-                    const apiUrl = `https://localhost:7215/products/${id}`;
+                    const apiUrl = `https://localhost:7097/products/DeleteProduct/${id}`;
 
                     fetch(apiUrl, {
                         method: "DELETE",
-                        headers: {
-                            'Authorization': `Bearer ${token}`,
-                            "Content-Type": "application/json",
-                        },
                     })
-                        .then((response) => response.json())
+                        .then((response) => response.status.ok)
                         .then((data) => {
                             closeRemoveModal();
                             showAlert("Product deleted with sucess!", "success");
-                            loadProducts(username);
+                            loadProducts();
                         })
                         .catch((error) => {
                             if (error.message.includes("401")) {
@@ -328,14 +304,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     };
 
-                    const apiUrl = `https://localhost:7215/products/${id}`;
+                    const apiUrl = `https://localhost:7097/products/UpdateProductData/${id}`;
 
 
                     fetch(apiUrl, {
                         method: "PUT",
                         headers: {
-                            'Authorization': `Bearer ${token}`,
-                            "Content-Type": "application/json",
+                            "Content-Type": "application/json"
                         },
                         body: JSON.stringify(editedData),
                     })
@@ -349,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         })
 
                         .then((data) => {
-                            loadProducts(username);
+                            loadProducts();
                             showAlert("Product updated with sucess!", "success");
                         })
                         .catch((error) => {
@@ -411,12 +386,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log(formDataObject);
 
-        const apiUrl = `https://localhost:7215/products/add/${username}`;
+        const apiUrl = `https://localhost:7097/products/AddProductData`;
 
         fetch(apiUrl, {
             method: "POST",
             headers: {
-                'Authorization': `Bearer ${token}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(formDataObject),
@@ -431,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json();
             })
             .then((data) => {
-                loadProducts(username);
+                loadProducts();
                 closeAddModal();
                 showAlert("New product saved with sucess!", "success");
             })
