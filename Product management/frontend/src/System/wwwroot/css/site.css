@@ -8,11 +8,45 @@ body {
     background-image: url('../css/imgs/background-blue.jpg')
 }
 
+
+.table-responsive {
+    width: 100%; 
+    overflow-x: auto;
+}
+
+    .table th,
+    .table td {
+        white-space: nowrap;
+    }
+
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        font-size: 12px;
+    }
+}
+
+
+
+
+.rounded-table {
+    width: 100%;
+    border-collapse: separate; /* Garante que as bordas arredondadas funcionem */
+    border-radius: 10px; /* Ajuste o valor conforme necessário */
+    overflow: hidden; /* Garante que o conteúdo da tabela não ultrapasse as bordas arredondadas */
+}
+
+    .rounded-table th,
+    .rounded-table td {
+        border: none; /* Remove as bordas padrão se necessário */
+    }
+
+
 #liveAlertPlaceholder {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1050; /* Certifique-se de que o alerta está acima de outros elementos */
+    z-index: 1050;
 }
 
 

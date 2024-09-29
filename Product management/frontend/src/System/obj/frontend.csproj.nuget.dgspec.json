@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj": {}
+    "C:\\Users\\Erica\\Documents\\Projeto\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj": {
+    "C:\\Users\\Erica\\Documents\\Projeto\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj",
+        "projectUniqueName": "C:\\Users\\Erica\\Documents\\Projeto\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj",
         "projectName": "frontend",
-        "projectPath": "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\productmanagement\\Product management\\frontend\\src\\System\\obj\\",
+        "projectPath": "C:\\Users\\Erica\\Documents\\Projeto\\productmanagement\\Product management\\frontend\\src\\System\\frontend.csproj",
+        "packagesPath": "C:\\Users\\Erica\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erica\\Documents\\Projeto\\productmanagement\\Product management\\frontend\\src\\System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Erica\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -106,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

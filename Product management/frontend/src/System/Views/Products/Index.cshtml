@@ -1,9 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Products";
 }
-<table id="dataTable" class="table table-dark table-striped rounded-table">
-    <p id="noProductsMessage">You have not registered any products yet.</p>
+    <div id="liveAlertPlaceholder"></div>
     <div id="alert-container"></div>
+    <p id="noProductsMessage">You have not registered any products yet.</p>
+<div class="table-responsive">
+<table id="dataTable" class="table table-dark table-striped rounded-table">
     <thead class="thead">
         <tr>
             <th scope="col">ID</th>
@@ -16,7 +18,6 @@
             <th scope="col"><i class="fa-solid fa-calendar"></i> Date</th>
         </tr>
     </thead>
-    <div id="liveAlertPlaceholder"></div>
     <tbody>
         <tr class="fadeIn">
             <th scope="row"></th>
@@ -29,8 +30,9 @@
         </tr>
     </tbody>
 </table>
+</div>
 <div class="action-buttons">
-    <button type="button" class="btn btn-primary" id="openModalBtn"><i class="fa-solid fa-plus"></i></i> Add Product</button>
+    <button type="button" class="btn btn-primary" id="openModalBtn"><i class="fa-solid fa-plus"></i>Add Product</button>
     <button type="button" class="btn btn-dark" id="editBtn"><i class="fa-regular fa-pen-to-square"></i> Edit Product</button>
     <button type="button" class="btn btn-secondary" id="removeBtn"><i class="fa-solid fa-xmark"></i> Remove Product</button>
 </div>
@@ -123,12 +125,7 @@
         </div>
     </div>
 </div>
-      </div>
-    </div>
 
-<div id="user" data-username="@ViewData["UserName"]" style="display: none;">
-    Olá, @ViewData["UserName"]!
-</div>
 
 
 

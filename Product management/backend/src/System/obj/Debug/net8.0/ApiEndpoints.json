@@ -48,7 +48,7 @@
   {
     "ContainingType": "backend.Controllers.ProductController",
     "Method": "UpdateProduct",
-    "RelativePath": "products/{id}",
+    "RelativePath": "products/{user}/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -56,6 +56,11 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "user",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
@@ -79,7 +84,7 @@
   {
     "ContainingType": "backend.Controllers.ProductController",
     "Method": "DeleteProduct",
-    "RelativePath": "products/{id}",
+    "RelativePath": "products/{user}/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -87,6 +92,11 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "user",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -111,13 +121,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productModel",
-        "Type": "backend.Models.ProductModel",
+        "Name": "user",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
-        "Name": "user",
-        "Type": "System.String",
+        "Name": "productModel",
+        "Type": "backend.Models.ProductModel",
         "IsRequired": true
       }
     ],
