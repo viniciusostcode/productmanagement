@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadProducts() {
-    fetch(`https://localhost:7097/products/GetProductsData`, {
+    fetch(`http://localhost:3000/Products/GetProductsData`, {
         method: 'GET'
     })
 
@@ -56,6 +56,7 @@ function loadProducts() {
                 } else {
                     showAlert("An error occurred", "warning");
                     throw new Error("An error occurred");
+                    return response.json();
                 }
 
             }
@@ -195,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
 
                 saveChangesRemoveBtn.addEventListener("click", function () {
-                    const apiUrl = `https://localhost:7097/products/DeleteProduct/${id}`;
+                    const apiUrl = `http://localhost:3000/products/DeleteProduct/${id}`;
 
                     fetch(apiUrl, {
                         method: "DELETE",
@@ -304,7 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     };
 
-                    const apiUrl = `https://localhost:7097/products/UpdateProductData/${id}`;
+                    const apiUrl = `http://localhost:3000/products/UpdateProductData/${id}`;
 
 
                     fetch(apiUrl, {
@@ -386,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log(formDataObject);
 
-        const apiUrl = `https://localhost:7097/products/AddProductData`;
+        const apiUrl = `http://localhost:3000/products/AddProductData`;
 
         fetch(apiUrl, {
             method: "POST",

@@ -691,3 +691,4 @@ C:\Users\Erica\Documents\Projeto\productmanagement\Product management\backend\sr
 C:\Users\Erica\Documents\Projeto\productmanagement\Product management\backend\src\System\obj\Debug\net8.0\backend.pdb
 C:\Users\Erica\Documents\Projeto\productmanagement\Product management\backend\src\System\obj\Debug\net8.0\backend.genruntimeconfig.cache
 C:\Users\Erica\Documents\Projeto\productmanagement\Product management\backend\src\System\obj\Debug\net8.0\ref\backend.dll
+C:\Users\Vinicius\Documents\Projetos\productmanagement\Product management\backend\src\System\bin\Debug\net8.0\appsettings.Production.json

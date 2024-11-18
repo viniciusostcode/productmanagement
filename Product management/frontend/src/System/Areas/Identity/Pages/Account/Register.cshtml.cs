@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using frontend.TokenService;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -18,6 +19,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using NuGet.Common;
 
 namespace WebApplication1.Areas.Identity.Pages.Account
 {
@@ -27,6 +29,7 @@ namespace WebApplication1.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IUserStore<IdentityUser> _userStore;
         private readonly IUserEmailStore<IdentityUser> _emailStore;
+        private readonly TokenService _tokenService;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
@@ -35,11 +38,13 @@ namespace WebApplication1.Areas.Identity.Pages.Account
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            TokenService tokenService)
         {
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
+            _tokenService = tokenService;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
@@ -144,6 +149,17 @@ namespace WebApplication1.Areas.Identity.Pages.Account
                     }
                     else
                     {
+                        if (!HttpContext.Request.Cookies.ContainsKey("AuthToken"))
+                        {
+                            var token = _tokenService.GenerateToken(userId);
+
+                            HttpContext.Response.Cookies.Append("AuthToken", token, new CookieOptions
+                            {
+                                HttpOnly = false,
+                                Secure = true
+                            });
+                        }
+
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }

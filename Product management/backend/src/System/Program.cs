@@ -15,6 +15,7 @@ namespace backend
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -28,10 +29,9 @@ namespace backend
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddDbContext<ProductSystemDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SQLiteConnection")));
+            builder.Services.AddDbContext<ProductSystemDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection")));
 
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
-
             builder.Services.AddScoped<UserManager<ApplicationUser>>();
             builder.Services.AddSwaggerGen(c =>
             {
@@ -86,6 +86,7 @@ namespace backend
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
