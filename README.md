@@ -1,32 +1,44 @@
 
-# Product Management
+# Product managment
 
-Sistema de controle de produtos, ao qual o usuário de interesse criará um cadastro e adicionando produtos no estoque.
-
-## How to run
+This is a modest CRUD project to keep safe anyone's product managment, using .NET Core 8,SQL and Docker.
 
 
-warning: é nescessário ter o .NET SDK 6.0 e 8.0 instalado.
+## Stack
 
-Acesse as pastas raizes do back-end e front-end em
+**Front-end:** HTML, CSS, JavaScript
 
-Controle de produtos\backend\src\Sistema
+**Back-end:** .NET Core
 
-Controle de produtos\frontend\src\Sistema
+**Infra:** Docker
 
-# 
 
-open um terminal nos respectivos diretórios, use o comando abaixo.
+## Installation 
+
+Install docker to initialize the containers
 
 ```bash
-  dotnet run
+  https://www.docker.com/products/docker-desktop/
+```
+## Run 
+
+Go to the folder source and run the docker
+
+```bash
+  docker-compose up
 ```
 
 
-Abra no seu browser o local host na porta https://localhost:7097/
+## Contribuitons
 
-## Stack usada
+Contribuitons are welcome!
 
-- ASP.NET Core
-- Entity Framework
-- SQLite3 (Previamente foi usado SQL + SQLServer porém foi decidido, que por se tratar de um projeto simples e visando a baixa configuração e instalação de uma instância de banco de dados, seria melhor o uso do sqlite).
+Check out `contribuindo.md` to learn how to get started.
+
+Please, follow code of conduct about this project.
+
+
+## Feedback
+
+If you got any feedback,  let me know via fnkcontato@gmail.com
+

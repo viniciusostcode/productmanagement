@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product mangement\\frontend\\src\\System\\frontend.csproj": {}
+    "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product mangement\\frontend\\src\\System\\frontend.csproj": {
+    "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product mangement\\frontend\\src\\System\\frontend.csproj",
+        "projectUniqueName": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\frontend.csproj",
         "projectName": "frontend",
-        "projectPath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product mangement\\frontend\\src\\System\\frontend.csproj",
+        "projectPath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\frontend.csproj",
         "packagesPath": "C:\\Users\\Vinicius\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product mangement\\frontend\\src\\System\\obj\\",
+        "outputPath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

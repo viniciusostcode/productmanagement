@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rqSmeJIi4n8=",
+  "dgSpecHash": "H5R3OkQVb8E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product mangement\\frontend\\src\\System\\frontend.csproj",
+  "projectFilePath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vinicius\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Vinicius\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

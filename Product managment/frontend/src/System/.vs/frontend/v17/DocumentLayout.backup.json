@@ -1,46 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\",
+  "WorkspaceRootPath": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\token\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\frontend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:frontend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\token\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:token\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagement\\product management\\frontend\\src\\system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|c:\\users\\vinicius\\documents\\projetos\\productmanagment\\product managment\\frontend\\src\\system\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54E4D450-AC8D-4365-9768-514FCEA8E575}|frontend.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,130 +62,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "frontend",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\frontend.csproj",
+              "RelativeDocumentMoniker": "frontend.csproj",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\frontend.csproj",
+              "RelativeToolTip": "frontend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-09T00:49:25.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T22:54:49.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Token\\TokenService.cs",
+              "RelativeDocumentMoniker": "Token\\TokenService.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Token\\TokenService.cs",
+              "RelativeToolTip": "Token\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T22:54:29.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\wwwroot\\js\\site.js",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\wwwroot\\js\\site.js",
               "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAcwI8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABABAAAAAAAAAAAAACYBAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-11-12T20:01:37.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-12T01:44:42.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T01:34:03.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-12T00:02:49.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Views\\Products\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Views\\Products\\Index.cshtml",
-              "RelativeToolTip": "Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-12T20:24:57.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Token\\TokenService.cs",
-              "RelativeDocumentMoniker": "Token\\TokenService.cs",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Token\\TokenService.cs",
-              "RelativeToolTip": "Token\\TokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T20:17:38.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T19:13:26.429Z",
+              "DocumentIndex": 9,
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ViewState": "AgIAAKEHAAAAAAAAAAAtwLQHAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-03T23:27:47.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAswBMAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T20:17:56.938Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T23:17:18.58Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAUwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T00:02:43.433Z"
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-03T22:07:50.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T22:01:54.407Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Dockerfile",
-              "RelativeDocumentMoniker": "Dockerfile",
-              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagement\\Product management\\frontend\\src\\System\\Dockerfile",
-              "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-10-24T20:40:45.41Z"
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T03:22:24.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-12T01:44:42.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\Documents\\Projetos\\productmanagment\\Product managment\\frontend\\src\\System\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T01:34:03.101Z",
+              "EditorCaption": ""
             }
           ]
         }

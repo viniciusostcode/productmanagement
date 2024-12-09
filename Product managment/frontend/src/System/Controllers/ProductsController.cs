@@ -23,9 +23,9 @@ public class ProductsController : Controller
 
         using (var client = new HttpClient())
         {
+
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await client.GetAsync($"http://backend:8080/products/find/{userName}");
-
             if (response.IsSuccessStatusCode)
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
@@ -52,6 +52,7 @@ public class ProductsController : Controller
             var productUpdated = new StringContent(jsonString, Encoding.UTF8, "application/json");
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
             var response = await client.PutAsync($"http://backend:8080/products/{userName}/{id}", productUpdated);
 
             if (response.IsSuccessStatusCode)
@@ -100,10 +101,16 @@ public class ProductsController : Controller
 
         var token = Request.Cookies["AuthToken"];
 
-        using (var client = new HttpClient())
+        var handler = new HttpClientHandler
+        {
+            ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+        };
+
+        using (var client = new HttpClient(handler))
         {
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
             var response = await client.DeleteAsync($"http://backend:8080/products/{userName}/{id}");
 
             if (response.IsSuccessStatusCode)

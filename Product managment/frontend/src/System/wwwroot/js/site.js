@@ -1,9 +1,10 @@
 ﻿const checkboxList = [];
+const checkedIds = [];
 
 const tabela = document.getElementById("dataTable");
-const tbody = tabela.getElementsByTagName("tbody")[0];
-
-tabela.style.display = "none";
+const tbody = document.getElementsByTagName("tbody")[0];
+const tableteste = document.getElementById("table-teste");
+const noProductsMessage = document.getElementById("noProductsMessage");
 
 function showAlert(message, type = 'info') {
     const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
@@ -23,6 +24,19 @@ function showAlert(message, type = 'info') {
     }, 5000);
 }
 
+function addCheckboxEvents() {
+    checkboxList.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+            const id = checkbox.dataset.id;
+            if (checkbox.checked) {
+                if (!checkedIds.includes(id)) checkedIds.push(id);
+            } else {
+                const index = checkedIds.indexOf(id);
+                if (index !== -1) checkedIds.splice(index, 1);
+            }
+        });
+    });
+}
 
 function closeAddModal() {
     const modal = document.getElementById("myModal");
@@ -42,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
     loadProducts();
     closeAddModal()
 });
-
 function loadProducts() {
     fetch(`http://localhost:3000/Products/GetProductsData`, {
         method: 'GET'
@@ -58,7 +71,6 @@ function loadProducts() {
                     throw new Error("An error occurred");
                     return response.json();
                 }
-
             }
             return response.json();
 
@@ -69,19 +81,17 @@ function loadProducts() {
 
             tbody.innerHTML = "";
 
+            noProductsMessage.style.display = "none";
+
             if (data.length === 0) {
                 noProductsMessage.style.display = "block";
-                tabela.style.display = "none";
+                tableteste.style.display = "none";
                 return;
             }
 
-            tabela.style.display = "block";
-            noProductsMessage.style.display = "none";
-
             data.forEach((item) => {
 
-                console.log("aqui ta o item");
-                console.log(item);
+                tableteste.style.display = "block";
 
                 const newRow = tbody.insertRow();
 
@@ -132,92 +142,97 @@ function loadProducts() {
             if (error.message.includes("401")) {
                 showAlert("Unauthorized: Please log in to view your products.", "warning");
             } else {
+                console.log(error.message);
                 showAlert("Failed to load products. Please try again later.", "warning");
             }
         });
 }
-
 document.addEventListener("DOMContentLoaded", function () {
-    const checkedIds = [];
+
+    // Selecting the buttons
 
     const removeBtn = document.getElementById("removeBtn");
 
     const modalRemove = document.getElementById("remove-modal");
 
-    const modalEdit = document.getElementById("edit-modal");
-
-    const editBtn = document.getElementById("editBtn");
-
-    const closeModalEditBtn = document.getElementById("closeModalEditBtn");
-
-    const cancelModalEditBtn = document.getElementById("cancelModalEditBtn");
-
-    closeModalEditBtn.addEventListener("click", function () {
-        modalEdit.style.display = "none";
-    });
-
-    cancelModalEditBtn.addEventListener("click", function () {
-        modalEdit.style.display = "none";
-    });
-
     const closeModalRemovetBtn = document.getElementById("closeModalRemoveBtn");
 
     const cancelModalRemoveBtn = document.getElementById("cancelModalRemoveBtn");
 
-    closeModalRemovetBtn.addEventListener("click", function () {
-        modalRemove.style.display = "none";
-    });
+    const saveChangesRemoveBtn = modalRemove.querySelector(
+    "#saveChangesRemoveBtn"
+    );
 
-    cancelModalRemoveBtn.addEventListener("click", function () {
-        modalRemove.style.display = "none";
-    });
+    let checkboxesVisible = false;
 
-    removeBtn.addEventListener("click", function () {
+    function showCheckboxes() {
         checkboxList.forEach((checkbox) => {
-            checkbox.style.display = "inline-block";
+            checkbox.style.display = "inline-block";  
         });
-    });
+        checkboxesVisible = true;
 
-    removeBtn.addEventListener("click", function () {
+        addCheckboxEvents();
+    }
+
+    function hideCheckboxes() {
         checkboxList.forEach((checkbox) => {
-            if (checkbox.checked) {
-                checkedIds.push(checkbox.dataset.id);
-
-                const row = checkbox.closest("tr");
-                const cells = row.cells;
-
-                modalRemove.classList.add("show");
-                modalRemove.style.display = "block";
-
-                const id = cells[0].textContent.replace("#", "");
-
-                const saveChangesRemoveBtn = modalRemove.querySelector(
-                    "#saveChangesRemoveBtn"
-                );
-
-                saveChangesRemoveBtn.addEventListener("click", function () {
-                    const apiUrl = `http://localhost:3000/products/DeleteProduct/${id}`;
-
-                    fetch(apiUrl, {
-                        method: "DELETE",
-                    })
-                        .then((response) => response.status.ok)
-                        .then((data) => {
-                            closeRemoveModal();
-                            showAlert("Product deleted with sucess!", "success");
-                            loadProducts();
-                        })
-                        .catch((error) => {
-                            if (error.message.includes("401")) {
-                                showAlert("Unauthorized: Please log in to delete products.", "warning");
-                            } else {
-                                showAlert("An error occurred while deleting the product. Please check the logs.", "warning");
-                            }
-                        });
-                });
-            }
+            checkbox.style.display = "none";  
+            checkbox.checked = false; 
         });
+        checkboxesVisible = false;  
+    }
+
+    // If the remove or cancel button will be trigged, the modal will desapear
+
+    [closeModalRemoveBtn, cancelModalRemoveBtn].forEach((btn) =>
+        btn.addEventListener("click", () => {
+            modalRemove.classList.remove("show");
+            modalRemove.style.display = "none";
+        })
+    );
+
+    // If the remove button will be trigged, the checkboxes will be shown
+    removeBtn.addEventListener("click", function () {
+        if (checkboxesVisible) {
+            modalRemove.classList.add("show");
+            modalRemove.style.display = "block";
+        } else {
+            showCheckboxes();
+        }
     });
+    saveChangesRemoveBtn.addEventListener("click", function () {
+
+        if (checkedIds.length === 0) {
+            console.log(checkedIds);
+            showAlert("No products selected for deletion.", "warning");
+            return;
+        }
+
+        const deletePromises = checkedIds.map((id) => {
+            console.log("Aqui chegou");
+            const apiUrl = `http://localhost:3000/products/DeleteProduct/${id}`;
+            return fetch(apiUrl, { method: "DELETE" });
+        });
+
+        Promise.all(deletePromises)
+            .then((responses) => {
+                const allSuccessful = responses.every((response) => response.ok);
+                if (allSuccessful) {
+                    showAlert("Products deleted successfully!", "success");
+                } else {
+                    showAlert("Some products could not be deleted.", "warning");
+                }
+                loadProducts();
+                hideCheckboxes();
+                closeRemoveModal();
+            })
+            .catch((error) => {
+                console.error("Error deleting products:", error);
+                showAlert("An error occurred while deleting the products.", "danger");
+            });
+    });
+
+});
 
     editBtn.addEventListener("click", function () {
         checkboxList.forEach((checkbox) => {
@@ -226,6 +241,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     editBtn.addEventListener("click", function () {
+
+        const modalEdit = document.getElementById("edit-modal");
+
+        const editBtn = document.getElementById("editBtn");
+
+        const closeModalEditBtn = document.getElementById("closeModalEditBtn");
+
+        const cancelModalEditBtn = document.getElementById("cancelModalEditBtn");
+
+        closeModalEditBtn.addEventListener("click", function () {
+            modalEdit.style.display = "none";
+        });
+
+        cancelModalEditBtn.addEventListener("click", function () {
+            modalEdit.style.display = "none";
+        });
+
+
         checkboxList.forEach((checkbox) => {
             if (checkbox.checked) {
                 checkedIds.push(checkbox.dataset.id);
@@ -338,7 +371,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
@@ -350,6 +382,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+
     const openModalBtn = document.getElementById("openModalBtn");
     const closeModalBtn = document.getElementById("closeModalAddBtn");
     const cancelModalBtn = document.getElementById("cancelModalAddBtn");

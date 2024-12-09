@@ -10,7 +10,7 @@ body {
 
 
 .table-responsive {
-    width: 100%; 
+    width: 100%;
     overflow-x: auto;
 }
 
@@ -26,19 +26,16 @@ body {
     }
 }
 
-
-
-
 .rounded-table {
     width: 100%;
-    border-collapse: separate; /* Garante que as bordas arredondadas funcionem */
-    border-radius: 10px; /* Ajuste o valor conforme necessário */
-    overflow: hidden; /* Garante que o conteúdo da tabela não ultrapasse as bordas arredondadas */
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
     .rounded-table th,
     .rounded-table td {
-        border: none; /* Remove as bordas padrão se necessário */
+        border: none;
     }
 
 
