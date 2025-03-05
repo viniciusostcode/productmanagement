@@ -1,0 +1,83 @@
+﻿@page "/createproduct"
+@using Microsoft.AspNetCore.Identity
+@using ProductManagement.Data
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@using ProductManagement.Data.Models
+@using System.Globalization
+@inject ApplicationDbContext Context
+@inject NavigationManager Navigation
+@inject UserManager<ApplicationUser> UserManager
+@rendermode InteractiveServer
+
+<h1>Add new product</h1>
+<br />
+
+<EditForm Model="@Model" OnValidSubmit="OnSubmitAsync" FormName="CreateForm">
+
+    <div class="mb-3">
+
+
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <label class="form-label fw-bold">Name</label>
+        <InputText @bind-Value="Model.Product" class="form-control mb-3" />
+        <ValidationMessage For="(()=> Model.Product)" />
+
+        <label class="form-label fw-bold">Situation</label>
+        <InputSelect @bind-Value="Model.Situation" class="form-control mb-3">
+            <option value="">Select a option</option>
+            <option value="Sold">Sold</option>
+            <option value="Purchased">Purchased</option>
+        </InputSelect>
+        <ValidationMessage For="(()=> Model.Situation)" />
+
+        <label class="form-label fw-bold">Quantity</label>
+        <InputNumber @bind-Value="Model.Quantity" class="form-control mb-3" />
+        <ValidationMessage For="(()=> Model.Quantity)" />
+
+        <label class="form-label fw-bold">Currency Code</label>
+        <InputSelect @bind-Value="Model.CurrencyCode" class="form-control mb-3">
+            <option value="">Select a option</option>
+            <option value="BRL">Brazillian Real</option>
+            <option value="USD">Dollar</option>
+        </InputSelect>
+        <ValidationMessage For="(()=> Model.CurrencyCode)" />
+
+        <label class="form-label fw-bold">Price</label>
+        <InputNumber @bind-Value="Model.Price" class="form-control mb-3" />
+        <ValidationMessage For="(()=> Model.Price)" />
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a class="btn btn-danger" href="/">Cancel</a>
+
+
+</EditForm>
+
+
+
+@code {
+
+    public ProductModel Model { get; set; } = new();
+
+    protected async Task OnSubmitAsync()
+    {
+
+        var user = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+
+        var name = user.User.Identity.Name;
+
+        Model.User = new ApplicationUser();
+        Model.User.UserName = user.User.Identity.Name;
+        Model.Date = DateTime.Now;
+
+        Context.Add(Model);
+        await Context.SaveChangesAsync();
+        Navigation.NavigateTo("/");
+    }
+
+   
+
+}

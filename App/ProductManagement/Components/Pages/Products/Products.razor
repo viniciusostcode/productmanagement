@@ -1,0 +1,151 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.EntityFrameworkCore
+@using ProductManagement.Data
+@using ProductManagement.Data.Models
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@rendermode InteractiveServer
+@inject NavigationManager Navigation
+@inject ApplicationDbContext Context
+@attribute [Authorize]
+
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <h1>Products</h1>
+    <a class="btn btn-primary" href="/createproduct">Add new products</a>
+</div>
+
+@if (!ProductsList.Any())
+{
+    <p id="noProductsMessage">You have not registered any products yet.</p>
+}
+else
+{
+
+    <br />
+    <table class="table">
+        <thead class="thead">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col"><i class="fa-solid fa-tag"></i> Product</th>
+                <th scope="col"><i class="fa-solid fa-chart-simple"></i>  Situation</th>
+                <th scope="col"><i class="fa-solid fa-plus"></i> Quantity</th>
+                <th scope="col"><i class="fas fa-coins"></i> Currency Code</th>
+                <th scope="col"><i class="fa-solid fa-dollar-sign"></i> Price</th>
+                <th scope="col"><i class="fa-solid fa-user"></i> User</th>
+                <th scope="col"><i class="fa-solid fa-calendar"></i> Date</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var product in ProductsList)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Product</td>
+                    <td>@product.Situation</td>
+                    <td>@product.Quantity</td>
+                    <td>@product.CurrencyCode</td>
+                    <td>@product.Price.Value.ToString("C")</td>
+                    <td>@product.User?.UserName</td>
+                    <td>@product.Date</td>
+                    <td>
+                        <a class="btn btn-primary" href="/editproduct/@product.Id"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <button type="button" class="btn btn-danger" @onclick="() => OnDelete(product.Id)">
+                            <i class=" fa-solid fa-x"></i>
+
+                        </button>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+    <br /> 
+    <div class="pagination">
+        <button type="button" class="btn btn-dark" @onclick="PreviousPage" disabled="@(!CanGoBack)">Previous</button>
+        <span class="mx-3">Page @currentPage of @totalPages</span>
+        <button type="button" class="btn btn-primary" @onclick="NextPage" disabled="@(!CanGoForward)">Next</button>
+    </div>
+}
+
+@code {
+
+    public string? UserName { get; set; }
+
+    private int currentPage = 1;
+    private int pageSize = 10;
+    private int totalPages = 0;
+    private int totalItems = 0;
+
+    public List<ProductModel> ProductsList { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadProducts();
+    }
+
+    public async Task OnDelete(int? id)
+    {
+        var product = Context.Products.FirstOrDefault(x => x.Id == id);
+        Context.Products.Remove(product);
+        await Context.SaveChangesAsync();
+        await LoadProducts();
+    }
+
+    public async Task LoadProducts()
+    {
+        var user = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+
+        UserName = user.User.Identity.Name;
+
+        var paginatedResult = await GetPaginatedProducts(currentPage, pageSize, UserName);
+
+        ProductsList = paginatedResult.Items;
+        totalItems = paginatedResult.TotalItems;
+        totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+    }
+
+    public async Task<PagedResult<ProductModel>> GetPaginatedProducts(int pageNumber, int pageSize, string? userName)
+    {
+        var query = Context.Products
+            .Include(x => x.User)
+            .Where(x => x.User.UserName == userName);
+
+        var totalItems = query.Count();
+
+        var items = query
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+
+        return new PagedResult<ProductModel>
+            {
+                Items = items,
+                TotalItems = totalItems,
+                PageSize = pageSize,
+                CurrentPage = pageNumber
+            };
+    }
+
+    private bool CanGoBack => currentPage > 1;
+    private bool CanGoForward => currentPage < totalPages;
+
+    private async Task PreviousPage()
+    {
+        if (CanGoBack)
+        {
+            currentPage--;
+            await LoadProducts();
+        }
+    }
+
+    private async Task NextPage()
+    {
+        if (CanGoForward)
+        {
+            currentPage++;
+            await LoadProducts();
+        }
+    }
+}
