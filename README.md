@@ -1,7 +1,7 @@
 
 # Product managment
 
-This is a modest CRUD project to keep safe anyone's product managment, using .NET Core 8,SQL, Docker and Blazor as a frontend.
+This is a modest CRUD project to keep safe anyone's product managment, using .NET Core 8, SQL, Docker and Blazor as a frontend.
 
 
 ## Stack
